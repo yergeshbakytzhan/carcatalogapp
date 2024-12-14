@@ -1,0 +1,13 @@
+version: '3.4'
+services:
+
+  postgres:
+    image: postgres:15
+    container_name: postgres
+    command: [ "postgres", "-c", "logging_collector=on", "-c", "log_statement=all" ]
+    environment:
+      POSTGRES_DB: cars
+      POSTGRES_USER: user
+      POSTGRES_PASSWORD: password
+    ports:
+      - "127.0.0.1:5433:5432"

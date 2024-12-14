@@ -1,0 +1,25 @@
+spring:
+
+  datasource:
+    password: user
+    username: password
+    url: jdbc:postgresql://localhost:5433/cars
+    driver-class-name: org.postgresql.Driver
+
+  jpa:
+    hibernate:
+      ddl-auto: none
+
+  docker:
+    compose:
+      enabled: true
+      file: docker-compose.yml
+
+springdoc:
+  swagger-ui:
+    path: /docs
+
+jwt:
+  key: z5fbRXK/8A6BxzGq9C+F12M123xwUdHTdEgPaJlT6U9aEw=
+  accessTokenExpiration: 3600000
+  refreshTokenExpiration: 86400000
